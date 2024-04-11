@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.452
+Model:                            OLS   Adj. R-squared:                  0.438
+Method:                 Least Squares   F-statistic:                     33.52
+Date:                Wed, 10 Apr 2024   Prob (F-statistic):           2.22e-29
+Time:                        09:50:12   Log-Likelihood:                 964.44
+No. Observations:                 251   AIC:                            -1915.
+Df Residuals:                     244   BIC:                            -1890.
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.0001      0.000      0.298      0.766      -0.001       0.001
+mkt-rf         0.4803      0.073      6.577      0.000       0.336       0.624
+smb            0.0608      0.094      0.645      0.520      -0.125       0.247
+hml            0.4668      0.177      2.642      0.009       0.119       0.815
+rmw            0.1945      0.166      1.173      0.242      -0.132       0.521
+cma            0.1244      0.188      0.661      0.509      -0.246       0.495
+mom            0.4255      0.092      4.635      0.000       0.245       0.606
+==============================================================================
+Omnibus:                        7.952   Durbin-Watson:                   1.918
+Prob(Omnibus):                  0.019   Jarque-Bera (JB):                9.837
+Skew:                          -0.263   Prob(JB):                      0.00731
+Kurtosis:                       3.815   Cond. No.                         671.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
