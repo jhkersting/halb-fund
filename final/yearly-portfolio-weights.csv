@@ -1,4 +1,4 @@
-year,ticker,weight_z-score,alpha,beta
+year,ticker,weight,alpha,beta
 2001,NVDA,0.0227,0.008,0.4475
 2001,NVO,0.0011,0.0004,0.5126
 2001,AMD,0.0033,0.0024,0.7957
