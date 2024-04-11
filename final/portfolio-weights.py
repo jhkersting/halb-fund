@@ -9,6 +9,7 @@ for y in years:
     portfolio = pd.read_csv(str(y) + '/mkt-rf-alpha/portfolio.csv')
     portfolio['weight'] = portfolio['weight_z-score']
     portfolio = portfolio[['year','ticker','weight','alpha','beta',]]
+    portfolio.to_csv(str(y) + '/portfolio-clean.csv', index=False)
     output = pd.concat([output,portfolio])
 
 output.round(4).to_csv('yearly-portfolio-weights.csv', index=False)
