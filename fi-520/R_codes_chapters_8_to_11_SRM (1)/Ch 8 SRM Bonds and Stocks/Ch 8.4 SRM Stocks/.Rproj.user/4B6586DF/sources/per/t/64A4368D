@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593866912641.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3615923059",
+    "id" : "64A4368D",
+    "lastKnownWriteTime" : 1593719637,
+    "last_content_update" : 1593719637,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.4 SRM Stocks/Instrument 1.R",
+    "project_path" : "Instrument 1.R",
+    "properties" : {
+        "cursorPosition" : "60,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

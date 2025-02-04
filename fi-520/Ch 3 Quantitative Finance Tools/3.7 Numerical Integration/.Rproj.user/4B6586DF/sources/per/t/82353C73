@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1610727161782.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1036905433",
+    "id" : "82353C73",
+    "lastKnownWriteTime" : 1612271199,
+    "last_content_update" : 1612271199553,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.7 Numerical Integration/Normal Distribution Functions.R",
+    "project_path" : "Normal Distribution Functions.R",
+    "properties" : {
+        "cursorPosition" : "66,15",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1577018547210.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1227594819",
+    "id" : "7B6B9B79",
+    "lastKnownWriteTime" : 1616000174,
+    "last_content_update" : 1616000174434,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.1 SRM GBM Binomial OVM/9.1 SRM GBM Binomial OVM American Style Test.R",
+    "project_path" : "9.1 SRM GBM Binomial OVM American Style Test.R",
+    "properties" : {
+        "cursorPosition" : "35,8",
+        "scrollLine" : "40"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

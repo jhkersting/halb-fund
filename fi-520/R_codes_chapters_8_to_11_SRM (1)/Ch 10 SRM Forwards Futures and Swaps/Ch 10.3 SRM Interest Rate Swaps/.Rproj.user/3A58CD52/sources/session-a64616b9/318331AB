@@ -1,0 +1,27 @@
+{
+    "id": "318331AB",
+    "path": "~/Desktop/fi-520/drm-ir-swaps/functions.R",
+    "project_path": null,
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1713281347627.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "336,15",
+        "scrollLine": "314"
+    },
+    "folds": "195|44|219|0|\n221|33|234|0|\n238|41|246|0|\n248|34|271|0|\n274|49|295|0|\n298|52|312|0|\n330|18|332|4|\n333|9|335|4|\n",
+    "lastKnownWriteTime": 1713371915,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1713371915781,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,26 @@
+{
+    "id": "F72F8EA8",
+    "path": "~/QFRepository/Ch 3 Quantitative Finance Tools/3.7 Numerical Integration/3.7 Numerical Double Integration Test.R",
+    "project_path": "3.7 Numerical Double Integration Test.R",
+    "type": "r_source",
+    "hash": "3376503663",
+    "contents": "",
+    "dirty": false,
+    "created": 1674589473629.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "14,56",
+        "scrollLine": "4"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1674679490,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1674679490722,
+    "read_only": false,
+    "read_only_alternatives": []
+}

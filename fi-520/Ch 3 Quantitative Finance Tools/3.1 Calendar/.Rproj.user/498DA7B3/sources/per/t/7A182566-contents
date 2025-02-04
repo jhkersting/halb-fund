@@ -1,0 +1,131 @@
+# 3.1 Calendar Test.R
+# Insight: Illustrate various day counting with various package
+# jrvFinance: yearFraction()
+# RQuantLib: yearFraction()
+# date: mdy.date()
+# Comparing the package jrvFinance with RQuantLib
+# rmarkdown::render("3.1 Calendar Test.R", "word_document")
+rm(list = ls())  # Take out the Environment "trash"
+cat("\014") # Clear Console, making error checking easier.
+while (!is.null(dev.list()))  dev.off() # Clear old plots
+par(family = 'Times New Roman') # Globally set fonts for graphs
+# Libraries
+#  date - functions for handling dates
+#  OUT jrvFinance - basic financial analysis functions (similar to spreadsheets) 
+#  OUT??jrvFinance # Remember the help command (only works if installed)
+Packages <- c("RQuantLib", "date", "tis", "jrvFinance")
+if(length(setdiff(Packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(Packages, rownames(installed.packages())))
+} # Make sure libraries are installed on this computer
+lapply(Packages, library, character.only=TRUE) # Load and attach libraries
+rm(Packages)
+# Part 1: Computing fraction of year with jrvFinance package
+InputStartMonth <- 6
+InputStartDay <- 1
+InputStartYear <- 2019
+JulianStartDate = mdy.date(InputStartMonth,InputStartDay,InputStartYear,nineteen = FALSE)
+InputEndMonth <- 6
+InputEndDay <- 1
+InputEndYear <- 2020
+JulianEndDate = mdy.date(InputEndMonth, InputEndDay, InputEndYear, nineteen = FALSE)
+d1 <- JulianStartDate
+d2 <- JulianEndDate
+
+
+
+
+# See Enum within yearFraction of RQuantLib
+F1 <- RQuantLib::yearFraction(d1, d2, dayCounters = 0) # "ACT/360, Actual360" 
+F11 <- 366/360
+F2 <- RQuantLib::yearFraction(d1, d2, dayCounters = 1) # "ACT/365, Actual365Fixed" 
+F21 <- 366/365
+F3 <- RQuantLib::yearFraction(d1, d2, dayCounters = 2) # "ACT/365, ActualActual" 
+F31 <- 366/365
+F4 <- RQuantLib::yearFraction(d1, d2, dayCounters = 3) # "ACT/252, ActualBusiness252" 
+F41 <- 251/252
+F5 <- RQuantLib::yearFraction(d1, d2, dayCounters = 6) # "30/360, Thirty360" 
+F51 <- 361/360
+F6 <- RQuantLib::yearFraction(d1, d2, dayCounters = 7) # "ACT/365 (No Leap), Actual365NoLeap" 
+F61 <- 366/365
+# OLD jrvFinance package
+r1 <- mdy.date(1, 1, InputStartYear, nineteen = FALSE) # Beginning of year, not June
+r2 <- mdy.date(1, 1, InputEndYear, nineteen = FALSE)
+F1 <- jrvFinance::yearFraction(d1, d2, r1, r2, freq = 2, convention = "30/360") # 360/360
+F2 <- jrvFinance::yearFraction(d1, d2, r1, r2, freq = 1, convention = "ACT/ACT") # 366/365
+F3 <- jrvFinance::yearFraction(d1, d2, r1, r2, freq = 2, convention = "ACT/360") # 366/360
+F4 <- jrvFinance::yearFraction(d1, d2, r1, r2, freq = 2, convention = "30/360E") # 360/360 (semi ?)
+F5 <- jrvFinance::yearFraction(d1, d2, r1, r2, freq = 12, convention = "ACT/ACT") # Monthly
+F6 <- jrvFinance::daycount.actual(d1, d2, variant = "bond")
+F7 <- jrvFinance::daycount.30.360(d1, d2, variant = "US")
+F1; F2; F3; F4; F5; F6; F7
+# Part 2: Find today on the system
+?'Sys.Date'
+TodaysDate = Sys.Date() # But in unusable format
+TodaysYear <- as.integer(format(TodaysDate, "%Y")) # year -- upper case
+TodaysMonth <- as.integer(format(TodaysDate, "%m")) # month -- note case sensitive
+TodaysDay <- as.integer(format(TodaysDate, "%d")) # day -- note case sensitive
+JulianTodaysDate = mdy.date(TodaysMonth, TodaysDay, TodaysYear, nineteen = FALSE)
+TodaysDate; TodaysYear; TodaysMonth; TodaysDay
+# Difference in days
+JulianTodaysDate = mdy.date(TodaysMonth, TodaysDay, TodaysYear, nineteen = FALSE)
+InputStartMonth <- 6
+InputStartDay <- 14
+InputStartYear <- 1986
+JulianStartDate = mdy.date(InputStartMonth,InputStartDay,InputStartYear,nineteen = FALSE)
+ActualDays = abs(JulianTodaysDate - JulianStartDate)
+ActualDays
+YearsIn365 = ActualDays/365.0
+YearsIn365
+# Just checking various date functions
+SDate = date.mdy(JulianStartDate)
+SMonth = SDate$month
+SDay = SDate$day
+SYear = SDate$year
+SDate; SMonth; SDay; SYear
+EDate = date.mdy(JulianTodaysDate)
+EMonth = EDate$month
+EDay = EDate$day
+EYear = EDate$year
+EDate; EMonth; EDay; EYear
+x <- 20220101 # Friday and holiday
+x <- mdy.date(1, 1, 2021, nineteen = FALSE)
+# Part 3: See package tis: Time Indexes and Time Indexed Series
+board <- FALSE # Presidential inauguration is not a holiday
+nextBusinessDay(x, holidays = NULL, goodFriday = F, board = F, inaug = board)
+previousBusinessDay(x, holidays = NULL, goodFriday = F, board = F, inaug = board)
+# Holidays
+y <- as.Date('2023-01-01')
+y1 <- as.Date('2024-01-01')
+RQuantLib::getHolidayList("UnitedStates",y, y1)
+RQuantLib::isHoliday("UnitedStates", y) 
+tis::isHoliday(y, goodFriday = TRUE, board = FALSE, inaug = board, businessOnly = TRUE)
+RQuantLib::isBusinessDay("UnitedStates", y)
+tis::isBusinessDay(y)
+isGoodFriday(x)
+isEaster(x)
+years <- 2023
+tis::holidays(years, goodFriday = F, board = F, inaug = board, businessOnly = T)
+federalHolidays(years, board = F, businessOnly = T)
+goodFriday(years)
+easter(years)
+years <- 2021
+tis::inaugurationDay(years)
+startTi <- 20190101
+endTi <- 20210101
+tis::holidaysBetween(startTi, endTi, goodFriday = F, board = F, inaug = board,
+  businessOnly = T)
+#
+# Part 4: Illustration of building your own date function
+#  Test whether a date is valid and either move it to preceeding or following
+#
+source('Adjust Date.R')
+TestMonth <- 9
+TestDay <- 26 # Normal Tuesday
+TestYear <- 2019
+Convention <- "MBP" # Modified Business Following or MBP (Preceeding)
+AdjustDate(TestMonth, TestDay, TestYear, Convention)
+TestDay <- 29 # Sunday
+AdjustDate(TestMonth, TestDay, TestYear, Convention)
+Convention <- "MBF"
+AdjustDate(TestMonth, TestDay, TestYear, Convention)
+

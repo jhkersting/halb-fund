@@ -1,0 +1,26 @@
+{
+    "id": "A09F20AA",
+    "path": "~/QFRepository/Ch 3 Quantitative Finance Tools/3.4 LSC Curve Fitting Model/3.4 LSC Coefficient Sensitivity Test.R",
+    "project_path": "3.4 LSC Coefficient Sensitivity Test.R",
+    "type": "r_source",
+    "hash": "2400244217",
+    "contents": "",
+    "dirty": false,
+    "created": 1642710248965.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "163,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1590582044,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1590582044,
+    "read_only": false,
+    "read_only_alternatives": []
+}

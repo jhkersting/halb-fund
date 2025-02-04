@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1616525854007.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1953157368",
+    "id" : "799CE6C6",
+    "lastKnownWriteTime" : 1594388540,
+    "last_content_update" : 1594388540,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.1 SRM GBM Binomial OVM/SRM GBM Binomial OVM Comparison Plots.R",
+    "project_path" : "SRM GBM Binomial OVM Comparison Plots.R",
+    "properties" : {
+        "cursorPosition" : "269,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

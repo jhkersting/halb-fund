@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593114900283.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1489004960",
+    "id" : "917DBE6B",
+    "lastKnownWriteTime" : 1593444639,
+    "last_content_update" : 1593444639595,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.3 SRM Corporate Bonds/SRM CB Book HPR Analysis Test.R",
+    "project_path" : "SRM CB Book HPR Analysis Test.R",
+    "properties" : {
+        "cursorPosition" : "2,3",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

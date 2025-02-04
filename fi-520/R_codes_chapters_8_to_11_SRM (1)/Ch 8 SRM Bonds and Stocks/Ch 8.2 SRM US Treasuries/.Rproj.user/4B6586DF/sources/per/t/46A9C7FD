@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593097785824.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "570899006",
+    "id" : "46A9C7FD",
+    "lastKnownWriteTime" : 1613854523,
+    "last_content_update" : 1613854523915,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.2 SRM US Treasuries/SRM UST Book Spreads Over CMT Test.R",
+    "project_path" : "SRM UST Book Spreads Over CMT Test.R",
+    "properties" : {
+        "cursorPosition" : "501,0",
+        "scrollLine" : "15"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

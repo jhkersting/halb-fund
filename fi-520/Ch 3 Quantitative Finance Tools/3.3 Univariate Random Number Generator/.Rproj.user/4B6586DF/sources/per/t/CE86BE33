@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1579551551566.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4119298042",
+    "id" : "CE86BE33",
+    "lastKnownWriteTime" : 1602619159,
+    "last_content_update" : 1602619159534,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.3 Univariate Random Number Generator/3.3 Univariate RNG Test.R",
+    "project_path" : "3.3 Univariate RNG Test.R",
+    "properties" : {
+        "cursorPosition" : "232,0",
+        "scrollLine" : "228"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

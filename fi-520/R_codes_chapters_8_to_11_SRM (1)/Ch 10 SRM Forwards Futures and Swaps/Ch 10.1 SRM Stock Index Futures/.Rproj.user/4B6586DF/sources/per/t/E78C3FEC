@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1616610890936.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1064014581",
+    "id" : "E78C3FEC",
+    "lastKnownWriteTime" : 1616611067,
+    "last_content_update" : 1616611067092,
+    "path" : "/QFRepository/Ch 10 SRM Forwards Futures and Swaps/Ch 10.1 SRM Stock Index Futures/10.1 Stock Index Futures MC Period Plots to File Test.R",
+    "project_path" : "10.1 Stock Index Futures MC Period Plots to File Test.R",
+    "properties" : {
+        "cursorPosition" : "28,29",
+        "scrollLine" : "21"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

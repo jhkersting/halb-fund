@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595245666985.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "219568026",
+    "id" : "55B191BA",
+    "lastKnownWriteTime" : 1613490577,
+    "last_content_update" : 1613490577137,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.7 Valuation Compound Options/GBM CO Sensitivity Analysis wrt Stock Price.R",
+    "project_path" : "GBM CO Sensitivity Analysis wrt Stock Price.R",
+    "properties" : {
+        "cursorPosition" : "84,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

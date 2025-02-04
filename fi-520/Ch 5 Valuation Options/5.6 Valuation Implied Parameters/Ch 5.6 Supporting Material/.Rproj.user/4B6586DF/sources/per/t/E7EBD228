@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588875830112.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1027192289",
+    "id" : "E7EBD228",
+    "lastKnownWriteTime" : 1588876308,
+    "last_content_update" : 1588876308922,
+    "path" : "/QFRepository/Ch 5 Valuation Options/Ch 5.6 Valuation Implied Parameters/Ch 5.6 Supporting Material/plotallimpvol.Rmd",
+    "project_path" : "plotallimpvol.Rmd",
+    "properties" : {
+        "cursorPosition" : "24,71",
+        "scrollLine" : "17"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

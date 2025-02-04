@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1610727376483.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2544260875",
+    "id" : "137FBA24",
+    "lastKnownWriteTime" : 1569844332,
+    "last_content_update" : 1569844332,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.7 Numerical Integration/Lognormal Distribution Functions.R",
+    "project_path" : "Lognormal Distribution Functions.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

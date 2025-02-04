@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1614880111996.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4144616921",
+    "id" : "6944D76",
+    "lastKnownWriteTime" : 1598371140,
+    "last_content_update" : 1598371140,
+    "path" : "/QFRepository/Ch 6 Valuation Forwards Futures and Swaps/Ch 6.1 Valuation Stock Index Futures Contracts/Futures Term Premiums.R",
+    "project_path" : "Futures Term Premiums.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

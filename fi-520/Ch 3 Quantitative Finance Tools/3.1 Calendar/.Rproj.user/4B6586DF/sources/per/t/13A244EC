@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1610403808887.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4286991898",
+    "id" : "13A244EC",
+    "lastKnownWriteTime" : 1611693090,
+    "last_content_update" : 1611693090226,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.1 Calendar/3.1 Calendar Test.R",
+    "project_path" : "3.1 Calendar Test.R",
+    "properties" : {
+        "cursorPosition" : "104,0",
+        "scrollLine" : "95"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

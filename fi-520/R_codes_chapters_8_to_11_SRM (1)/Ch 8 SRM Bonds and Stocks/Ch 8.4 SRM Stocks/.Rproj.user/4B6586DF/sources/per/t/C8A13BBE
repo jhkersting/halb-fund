@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576094757908.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "254342366",
+    "id" : "C8A13BBE",
+    "lastKnownWriteTime" : 1593867239,
+    "last_content_update" : 1593867239153,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.4 SRM Stocks/SRM Two Underlying Instruments Test.R",
+    "project_path" : "SRM Two Underlying Instruments Test.R",
+    "properties" : {
+        "cursorPosition" : "189,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1615492179329.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "532364428",
+    "id" : "7D49AB6B",
+    "lastKnownWriteTime" : 1613578318,
+    "last_content_update" : 1613578318,
+    "path" : "/QFRepository/Ch 6 Valuation Forwards Futures and Swaps/Ch 6.3 Valuation Interest Rate Swaps/6.3 Discount Curve Estimation Test.R",
+    "project_path" : "6.3 Discount Curve Estimation Test.R",
+    "properties" : {
+        "cursorPosition" : "97,33",
+        "scrollLine" : "90"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

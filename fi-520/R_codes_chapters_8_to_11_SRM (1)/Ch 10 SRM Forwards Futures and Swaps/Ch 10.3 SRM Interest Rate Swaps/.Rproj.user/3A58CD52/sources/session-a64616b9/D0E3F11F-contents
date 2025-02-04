@@ -1,0 +1,126 @@
+# empty environment
+setwd("/Users/jhkersting/Desktop/fi-520/drm-ir-swaps")
+rm(list = ls())  # Take out the Environment "trash"
+cat("\014") # Clear Console, making error checking easier.
+while (!is.null(dev.list()))  dev.off() # Clear old plots
+Packages <- c("xts", "MASS", 'lubridate','mvtnorm','hhsmm')
+if(length(setdiff(Packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(Packages, rownames(installed.packages())))
+} # Make sure libraries are installed on this computer
+lapply(Packages, library, character.only=TRUE) # Load and attach libraries
+rm(Packages)
+# read in functions-1.R
+source("functions.R")
+
+# load packages
+sims = 100
+n_days = 30
+lsc_factors = 3 #
+start_date = ymd("2023-01-01")
+term_length <- 10# term of swap
+# set working directory
+
+
+swap_data <- list(
+  scalar = 2,
+  factors = lsc_factors,
+  notional = 1000000,
+  start_date = start_date,
+  current_date = start_date,
+  end_date = start_date + years(term_length),
+  flt_calc = 'before',
+  fix_info = list(
+    day_count = '30/360',
+    pay_freq = 'semiannual',
+    reset_position = 'In Advance',
+    current_rate = 0.05
+  ),
+  flt_info = list(
+    day_count = 'ACT/360',
+    pay_freq = 'quarterly',
+    reset_position = 'In Advance',
+    current_rate = 0
+  ),
+  value = 0, # positive for fixed payer, negative for floating payer
+  accrued_interest = 0,
+  passed_years = 0,
+  years = term_length
+)
+swap_data$years <-
+  interval(swap_data$start_date, swap_data$end_date) / years(1)
+
+# Get Rates and Rates Data
+df <- read.csv("treasury-cmt-rates.csv")
+maturities <- c(1 / 12, 3 / 12, 6 / 12, 1, 2, 3, 5, 7, 10, 20, 30)
+# remove date column
+df$date <- as.Date(df$date, format = '%m/%d/%Y')
+ts_data <- xts(df[,-1], order.by = df$date)
+# plot the 10 year rate
+
+## Clean data
+# replace "" with NA
+ts_data[ts_data == ''] <- 'ND'
+# Remove rows that have ND in every column
+ts_data <- ts_data[!apply(ts_data, 1, function(x)all(x == 'ND')),]
+# replace 'ND with NA
+ts_data[ts_data == 'ND'] <- NA
+# remove rows with NA
+ts_data <- ts_data[complete.cases(ts_data),]
+dates <- index(ts_data)
+dates <- ymd(dates)
+plot(dates,ts_data[,10] , type = 'l', xlab = '10 Year Rate', ylab = 'Date')
+# convert to numeric
+ts_data <- apply(ts_data, 2, as.numeric)
+ts_data <- ts_data / 100
+
+
+# create changes in rates
+ts_data_diff <- diff(ts_data)
+
+# weights divide index by length of data
+weights <- seq_along(ts_data_diff[,1]) / length(ts_data_diff[,1])
+cov_matrix <- cov.wt(ts_data_diff, wt = weights, method = "unbiased")
+cov_matrix <- cov_matrix$cov
+
+# get rates on date that matches current date
+day_index <- which(dates == swap_data$current_date)
+day_index <- as.numeric(day_index)
+if (length(day_index) == 0) {
+  swap_data$current_date <- dates[which(dates > swap_data$current_date)][1]
+  swap_data$start_date <- swap_data$current_date
+  swap_data$end_date <- swap_data$current_date + years(term_length)
+  day_index <- which(dates == swap_data$current_date)
+}
+rate_index <- day_index 
+### Get Current Rates and Changes
+current_rates <- ts_data[rate_index,]
+## Get Interest Rate Info
+rates_info <- list(rates = current_rates,
+                   maturities = maturities,
+                   factors = swap_data$factors)
+swap_data$yield_curve <- rates_info$rates
+rates_info$lsc_coeffs <- get_lsc_coeff(rates_info)
+
+
+# Calculate Swap info
+swap_data$fix_info <- get_leg_info(swap_data, 'fix_info', rates_info)
+swap_data$flt_info <- get_leg_info(swap_data, 'flt_info', rates_info)
+# get swap fixed rate
+fixed_rate <- optimize_fx_rate(swap_data)
+swap_data$fixed_rate <- fixed_rate
+
+# plot the flt_info forward rate
+plot(swap_data$flt_info$pay_years,swap_data$flt_info$forward_rates, type = 'l', xlab = 'Forward Rate', ylab = 'Reset Dates')
+lines(swap_data$flt_info$pay_years, swap_data$flt_info$lsc_rates, col = 'red')
+# add swap rate
+abline(h = swap_data$fixed_rate, col = 'blue')
+
+
+# Run VaR 
+run_VaR_simulations(n_days,sims,rates_info,swap_data,cov_matrix)
+
+
+
+
+
+

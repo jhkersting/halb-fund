@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1602097913714.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "194809046",
+    "id" : "DC4C2107",
+    "lastKnownWriteTime" : 1569532651,
+    "last_content_update" : 1569532651,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.3 Univariate Random Number Generator/3.3 Univariate RNG Large Sample Test.R",
+    "project_path" : "3.3 Univariate RNG Large Sample Test.R",
+    "properties" : {
+        "cursorPosition" : "117,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

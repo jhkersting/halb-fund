@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576084941279.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2909265590",
+    "id" : "7A611AB0",
+    "lastKnownWriteTime" : 1582214292,
+    "last_content_update" : 1582214292637,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.1 SRM Centered Differencing/SRM Centered Differencing Functions.R",
+    "project_path" : "SRM Centered Differencing Functions.R",
+    "properties" : {
+        "cursorPosition" : "34,3",
+        "scrollLine" : "28"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

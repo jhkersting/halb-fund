@@ -1,0 +1,26 @@
+{
+    "id": "0F5AE78A",
+    "path": "~/QFRepository/Ch 6 Valuation Forwards Futures and Swaps/Ch 6.3 Valuation Interest Rate Swaps/6.3 LSC Model IR Swap Test.R",
+    "project_path": "6.3 LSC Model IR Swap Test.R",
+    "type": "r_source",
+    "hash": "384442651",
+    "contents": "",
+    "dirty": false,
+    "created": 1645111883098.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "18,22",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1613567392,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1613567392,
+    "read_only": false,
+    "read_only_alternatives": []
+}

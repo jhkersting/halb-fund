@@ -1,0 +1,119 @@
+# SRM Centered Differencing Test.R
+# rmarkdown::render("SRM Centered Differencing Test.R", "word_document")
+rm(list = ls())  # Take out the Environment "trash"
+cat("\014") # Clear Console, making error checking easier.
+while (!is.null(dev.list()))  dev.off() # Clear old plots
+par(family = 'Times New Roman') # Globally set fonts for graphs
+# Libraries
+#  date - functions for handling dates
+# #  optimx - general purpose optimization
+Packages <- c("date")
+if(length(setdiff(Packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(Packages, rownames(installed.packages())))
+} # Make sure libraries are installed on this computer
+lapply(Packages, library, character.only=TRUE) # Load and attach libraries
+rm(Packages)
+#
+# Centered Differencing Inputs
+#
+  inputOrder <- 1
+#
+# Test Inputs for U. S. Treasury bonds
+#
+MarketQuotedBondPrice = 975312.50 # Dollars: Quoted price without accrued interest
+inputFrequency = 2L         # Coupon frequency per year, 1, 2, 4, or 12
+inputCouponRate = 2.25      # Percent
+inputPar = 1000000.0        # Currency
+inputYieldToMaturity = 2.535235  # Percent
+# Dollars: Quoted bond price without accrued interest (stubbed to -99)
+inputBondPrice = -99       
+SettlementDateMonth = 1     # Integer: 1-12
+SettlementDateDay = 17      # Integer: 1-31
+SettlementDateYear = 2018   # Integer: 1-very high number
+MaturityDateMonth = 11      # Integer: 1-12
+MaturityDateDay = 15        # Integer: 1-31
+MaturityDateYear = 2027     # Integer: 1-very high number
+inputChangeInYTM = 1.0
+#
+# UST functions (semi-annual only)
+#
+source("SRM Centered Differencing Functions.R")
+BONDInputData <- list(inputFrequency, inputCouponRate, inputPar, 
+  inputYieldToMaturity, inputBondPrice, 
+  SettlementDateMonth, SettlementDateDay, SettlementDateYear, 
+  MaturityDateMonth, MaturityDateDay, MaturityDateYear,
+  inputChangeInYTM, inputOrder)
+names(BONDInputData) <- c("Frequency", "CouponRate", "Par", 
+  "YieldToMaturity", "BondPrice", 
+  "SettlementDateMonth", "SettlementDateDay", "SettlementDateYear", 
+  "MaturityDateMonth", "MaturityDateDay", "MaturityDateYear",
+  "ChangeInYTM", "Order")
+#
+# Change YTM by 100 basis points
+#
+BONDInputData$ChangeInYTM = 1.0
+FD1 <- BondFD(BONDInputData)
+BONDInputData$Order <- 2
+FD2 <- BondFD(BONDInputData)
+BONDInputData$Order <- 3
+FD3 <- BondFD(BONDInputData)
+BONDInputData$Order <- 4
+FD4 <- BondFD(BONDInputData)
+MDDur <- Duration(BONDInputData)
+FD <- -MDDur*BondValue(BONDInputData)/100
+MDDur
+FD; FD1; FD2; FD3; FD4
+Error1 <- FD1 - FD; Error2 <- FD2 - FD; Error3 <- FD3 - FD; Error4 <- FD4 - FD
+Error1; Error2; Error3; Error4
+#
+# Change YTM by 10 basis points
+#
+BONDInputData$ChangeInYTM = 0.1
+FD1 <- BondFD(BONDInputData)
+BONDInputData$Order <- 2
+FD2 <- BondFD(BONDInputData)
+BONDInputData$Order <- 3
+FD3 <- BondFD(BONDInputData)
+BONDInputData$Order <- 4
+FD4 <- BondFD(BONDInputData)
+MDDur <- Duration(BONDInputData)
+FD <- -MDDur*BondValue(BONDInputData)/100
+MDDur
+FD; FD1; FD2; FD3; FD4
+Error1 <- FD1 - FD; Error2 <- FD2 - FD; Error3 <- FD3 - FD; Error4 <- FD4 - FD
+Error1; Error2; Error3; Error4
+#
+# Change YTM by 1 basis points
+#
+BONDInputData$ChangeInYTM = 0.01
+FD1 <- BondFD(BONDInputData)
+BONDInputData$Order <- 2
+FD2 <- BondFD(BONDInputData)
+BONDInputData$Order <- 3
+FD3 <- BondFD(BONDInputData)
+BONDInputData$Order <- 4
+FD4 <- BondFD(BONDInputData)
+MDDur <- Duration(BONDInputData)
+FD <- -MDDur*BondValue(BONDInputData)/100
+MDDur
+FD; FD1; FD2; FD3; FD4
+Error1 <- FD1 - FD; Error2 <- FD2 - FD; Error3 <- FD3 - FD; Error4 <- FD4 - FD
+Error1; Error2; Error3; Error4
+#
+# Change YTM by 0.0000001 basis points
+#
+BONDInputData$ChangeInYTM = 0.00000001
+FD1 <- BondFD(BONDInputData)
+BONDInputData$Order <- 2
+FD2 <- BondFD(BONDInputData)
+BONDInputData$Order <- 3
+FD3 <- BondFD(BONDInputData)
+BONDInputData$Order <- 4
+FD4 <- BondFD(BONDInputData)
+MDDur <- Duration(BONDInputData)
+FD <- -MDDur*BondValue(BONDInputData)/100
+MDDur
+FD; FD1; FD2; FD3; FD4
+Error1 <- FD1 - FD; Error2 <- FD2 - FD; Error3 <- FD3 - FD; Error4 <- FD4 - FD
+Error1; Error2; Error3; Error4
+

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581038091639.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "8489281",
+    "id" : "FD448F82",
+    "lastKnownWriteTime" : 1611410126,
+    "last_content_update" : 1611410126186,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.4 Valuation GBM CT OVM/5.4 GBMOVM Test.R",
+    "project_path" : "5.4 GBMOVM Test.R",
+    "properties" : {
+        "cursorPosition" : "4,34",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

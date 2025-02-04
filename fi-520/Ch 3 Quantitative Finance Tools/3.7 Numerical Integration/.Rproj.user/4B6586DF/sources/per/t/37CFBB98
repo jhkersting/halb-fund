@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1612619458919.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2898308124",
+    "id" : "37CFBB98",
+    "lastKnownWriteTime" : 1612621129,
+    "last_content_update" : 1612621129936,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.7 Numerical Integration/Density and Distribution Study.R",
+    "project_path" : "Density and Distribution Study.R",
+    "properties" : {
+        "cursorPosition" : "166,25",
+        "scrollLine" : "156"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

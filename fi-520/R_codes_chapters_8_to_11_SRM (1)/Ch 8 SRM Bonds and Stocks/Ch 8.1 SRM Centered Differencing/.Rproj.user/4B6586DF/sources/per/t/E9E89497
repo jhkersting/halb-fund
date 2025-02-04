@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576084839431.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2243167944",
+    "id" : "E9E89497",
+    "lastKnownWriteTime" : 1613579325,
+    "last_content_update" : 1613579325414,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.1 SRM Centered Differencing/SRM Centered Differencing Test.R",
+    "project_path" : "SRM Centered Differencing Test.R",
+    "properties" : {
+        "cursorPosition" : "4,13",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

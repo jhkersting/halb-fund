@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1599245683066.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2489173475",
+    "id" : "AB1A62AD",
+    "lastKnownWriteTime" : 1600271602,
+    "last_content_update" : 1600271602679,
+    "path" : "/QFRepository/Ch 10 SRM Forwards Futures and Swaps/Ch 10.3 SRM Interest Rate Swaps/10.3 SRM Interest Rate Swaps Test.R",
+    "project_path" : "10.3 SRM Interest Rate Swaps Test.R",
+    "properties" : {
+        "cursorPosition" : "178,23",
+        "scrollLine" : "170"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

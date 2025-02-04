@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1613854766658.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2373779926",
+    "id" : "4B251C4B",
+    "lastKnownWriteTime" : 1592943957,
+    "last_content_update" : 1592943957,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.2 SRM US Treasuries/SRM UST Book HPR Analysis Test.R",
+    "project_path" : "SRM UST Book HPR Analysis Test.R",
+    "properties" : {
+        "cursorPosition" : "379,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

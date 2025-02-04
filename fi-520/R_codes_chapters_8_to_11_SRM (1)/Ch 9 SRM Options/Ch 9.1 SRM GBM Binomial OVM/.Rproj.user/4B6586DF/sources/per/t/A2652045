@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1616525833192.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2160918507",
+    "id" : "A2652045",
+    "lastKnownWriteTime" : 1615143958,
+    "last_content_update" : 1615143958,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.1 SRM GBM Binomial OVM/ASGBMBINOVM With SRM Functions.R",
+    "project_path" : "ASGBMBINOVM With SRM Functions.R",
+    "properties" : {
+        "cursorPosition" : "316,19",
+        "scrollLine" : "311"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

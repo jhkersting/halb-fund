@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581629154800.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "307003062",
+    "id" : "D5950E7A",
+    "lastKnownWriteTime" : 1588936427,
+    "last_content_update" : 1588936427969,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.6 Valuation Implied Parameters/GBMOVM and Extended Functions.R",
+    "project_path" : "GBMOVM and Extended Functions.R",
+    "properties" : {
+        "cursorPosition" : "100,4",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

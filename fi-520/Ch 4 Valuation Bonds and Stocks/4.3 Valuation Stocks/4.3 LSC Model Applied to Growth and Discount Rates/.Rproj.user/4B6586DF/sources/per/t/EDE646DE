@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1591980529816.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "612663093",
+    "id" : "EDE646DE",
+    "lastKnownWriteTime" : 1593643437,
+    "last_content_update" : 1593643437348,
+    "path" : "/QFRepository/Ch 4 Valuation Bonds and Stocks/4.3 Valuation Stocks/4.3 LSC Model Applied to Growth and Discount Rates/LSC Model Growth and Discount Rate Test.R",
+    "project_path" : "LSC Model Growth and Discount Rate Test.R",
+    "properties" : {
+        "cursorPosition" : "13,16",
+        "scrollLine" : "9"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

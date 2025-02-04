@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595419827611.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2580405150",
+    "id" : "20F3077D",
+    "lastKnownWriteTime" : 1595452504,
+    "last_content_update" : 1595452504024,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.5 SRM GBM CT Compound Options/GBM CO Limits Test.R",
+    "project_path" : "GBM CO Limits Test.R",
+    "properties" : {
+        "cursorPosition" : "338,0",
+        "scrollLine" : "318"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

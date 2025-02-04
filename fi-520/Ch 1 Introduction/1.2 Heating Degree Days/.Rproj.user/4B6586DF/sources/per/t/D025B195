@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578498184982.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "559518381",
+    "id" : "D025B195",
+    "lastKnownWriteTime" : 1546957406,
+    "last_content_update" : 1546957406,
+    "path" : "/QFRepository/Ch 1 Introduction/1.2 Heating Degree Days/1.2 HDD Test.R",
+    "project_path" : "1.2 HDD Test.R",
+    "properties" : {
+        "cursorPosition" : "0,7",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

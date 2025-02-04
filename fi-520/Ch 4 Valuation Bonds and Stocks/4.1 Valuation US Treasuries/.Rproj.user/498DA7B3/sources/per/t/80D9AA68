@@ -1,0 +1,26 @@
+{
+    "id": "80D9AA68",
+    "path": "~/QFRepository/Ch 4 Valuation Bonds and Stocks/4.1 Valuation US Treasuries/UST Book Spreads Over CMT Test.R",
+    "project_path": "UST Book Spreads Over CMT Test.R",
+    "type": "r_source",
+    "hash": "3725421625",
+    "contents": "",
+    "dirty": false,
+    "created": 1642789791675.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "400,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1674760660,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1674760660977,
+    "read_only": false,
+    "read_only_alternatives": []
+}

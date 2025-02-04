@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1594665954336.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3311283174",
+    "id" : "D3A1B8E",
+    "lastKnownWriteTime" : 1603032914,
+    "last_content_update" : 1603032914298,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.4 SRM ABM CT OVM/9.4 SRM ABM CT OVM Test.R",
+    "project_path" : "9.4 SRM ABM CT OVM Test.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

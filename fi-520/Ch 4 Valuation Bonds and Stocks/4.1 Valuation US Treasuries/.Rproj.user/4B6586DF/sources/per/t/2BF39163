@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1612446660425.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2842565292",
+    "id" : "2BF39163",
+    "lastKnownWriteTime" : 1612472120,
+    "last_content_update" : 1612472120733,
+    "path" : "/QFRepository/Ch 4 Valuation Bonds and Stocks/4.1 Valuation US Treasuries/UST Functions.R",
+    "project_path" : "UST Functions.R",
+    "properties" : {
+        "cursorPosition" : "73,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

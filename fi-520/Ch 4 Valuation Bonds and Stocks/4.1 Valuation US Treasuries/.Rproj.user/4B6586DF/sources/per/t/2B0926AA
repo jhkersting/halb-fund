@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1612446908510.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4231158753",
+    "id" : "2B0926AA",
+    "lastKnownWriteTime" : 1612226681,
+    "last_content_update" : 1612226681,
+    "path" : "/QFRepository/Ch 4 Valuation Bonds and Stocks/4.1 Valuation US Treasuries/UST Book Inputs.R",
+    "project_path" : "UST Book Inputs.R",
+    "properties" : {
+        "cursorPosition" : "8,21",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

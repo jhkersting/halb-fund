@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1594141083601.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1963981705",
+    "id" : "F2509BB8",
+    "lastKnownWriteTime" : 1615214779,
+    "last_content_update" : 1615214779746,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.2 SRM ABM Binomial OVM/9.2 SRM ABM Binomial OVM Test.R",
+    "project_path" : "9.2 SRM ABM Binomial OVM Test.R",
+    "properties" : {
+        "cursorPosition" : "9,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

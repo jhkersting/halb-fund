@@ -1,0 +1,26 @@
+{
+    "id": "D69CBCD4",
+    "path": "~/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.2 SRM US Treasuries/SRM UST Functions.R",
+    "project_path": "SRM UST Functions.R",
+    "type": "r_source",
+    "hash": "2232628158",
+    "contents": "",
+    "dirty": false,
+    "created": 1678389960900.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "265,3",
+        "scrollLine": "257"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1678390096,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1678390096910,
+    "read_only": false,
+    "read_only_alternatives": []
+}

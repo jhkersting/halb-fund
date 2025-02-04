@@ -1,0 +1,26 @@
+{
+    "id": "D5B29C4A",
+    "path": "~/QFRepository/Ch 5 Valuation Options/5.7 Valuation Compound Options/GBM CO Test.R",
+    "project_path": "GBM CO Test.R",
+    "type": "r_source",
+    "hash": "3280478355",
+    "contents": "",
+    "dirty": false,
+    "created": 1645111397096.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "14,12",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1613491716,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1613491716,
+    "read_only": false,
+    "read_only_alternatives": []
+}

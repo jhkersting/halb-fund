@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1613253756077.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3457327425",
+    "id" : "CC376405",
+    "lastKnownWriteTime" : 1581459600,
+    "last_content_update" : 1581459600,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.3 Valuation ABM Binomial OVM/ASABMBINOVM Backward Recursion Function.R",
+    "project_path" : "ASABMBINOVM Backward Recursion Function.R",
+    "properties" : {
+        "cursorPosition" : "88,4",
+        "scrollLine" : "75"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

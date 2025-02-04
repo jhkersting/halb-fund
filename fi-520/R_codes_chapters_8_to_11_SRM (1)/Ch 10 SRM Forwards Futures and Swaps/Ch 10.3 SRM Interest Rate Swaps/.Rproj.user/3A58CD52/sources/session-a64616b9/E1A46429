@@ -1,0 +1,26 @@
+{
+    "id": "E1A46429",
+    "path": "~/Desktop/fi-520/R_codes_chapters_8_to_11_SRM (1)/Ch 10 SRM Forwards Futures and Swaps/Ch 10.3 SRM Interest Rate Swaps/SWAP Functions.R",
+    "project_path": "SWAP Functions.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": true,
+    "created": 1713155897358.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "689,0",
+        "scrollLine": "0"
+    },
+    "folds": "248|18|333|0|\n338|24|370|0|\n374|26|529|0|\n534|49|585|0|\n589|40|639|0|\n643|46|686|0|\n",
+    "lastKnownWriteTime": 1713156956,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1713369507008,
+    "read_only": false,
+    "read_only_alternatives": []
+}

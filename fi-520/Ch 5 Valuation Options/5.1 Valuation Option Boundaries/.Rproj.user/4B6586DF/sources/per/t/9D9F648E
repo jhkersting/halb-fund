@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578579511253.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3227149864",
+    "id" : "9D9F648E",
+    "lastKnownWriteTime" : 1581084192,
+    "last_content_update" : 1581084192037,
+    "path" : "/QFRepository/Ch 5 Valuation Options/Ch 5.1 Valuation Option Boundaries/5.1 Valuation Option Boundaries Test.R",
+    "project_path" : "5.1 Valuation Option Boundaries Test.R",
+    "properties" : {
+        "cursorPosition" : "4,15",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

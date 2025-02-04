@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1611336682051.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2381978485",
+    "id" : "6989BD3B",
+    "lastKnownWriteTime" : 1611336754,
+    "last_content_update" : 1611336754978,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.2 Valuation GBM Binomial OVM/Valuation GBM Binomial OVM European-Style Test.R",
+    "project_path" : "Valuation GBM Binomial OVM European-Style Test.R",
+    "properties" : {
+        "cursorPosition" : "23,35",
+        "scrollLine" : "16"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

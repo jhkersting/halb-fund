@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1613579069544.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1869155724",
+    "id" : "4E9B92D2",
+    "lastKnownWriteTime" : 1576014908,
+    "last_content_update" : 1576014908,
+    "path" : "/QFRepository/Ch 8 SRM Bonds and Stocks/Ch 8.1 SRM Centered Differencing/SRM UST Functions.R",
+    "project_path" : "SRM UST Functions.R",
+    "properties" : {
+        "cursorPosition" : "258,37",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

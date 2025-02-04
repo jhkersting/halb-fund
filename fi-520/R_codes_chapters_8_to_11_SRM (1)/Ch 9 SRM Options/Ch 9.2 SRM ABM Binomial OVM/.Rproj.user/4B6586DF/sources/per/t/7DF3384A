@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1615211726760.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1741153694",
+    "id" : "7DF3384A",
+    "lastKnownWriteTime" : 1594669894,
+    "last_content_update" : 1594669894,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.2 SRM ABM Binomial OVM/ESABMBINOVM Backward Recursion With SRM Functions.R",
+    "project_path" : "ESABMBINOVM Backward Recursion With SRM Functions.R",
+    "properties" : {
+        "cursorPosition" : "89,0",
+        "scrollLine" : "80"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

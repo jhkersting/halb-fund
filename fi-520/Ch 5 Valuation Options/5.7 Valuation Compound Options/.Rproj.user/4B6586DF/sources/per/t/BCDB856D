@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1613491622452.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2550977142",
+    "id" : "BCDB856D",
+    "lastKnownWriteTime" : 1571507101,
+    "last_content_update" : 1571507101,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.7 Valuation Compound Options/GBM COVM Functions.R",
+    "project_path" : "GBM COVM Functions.R",
+    "properties" : {
+        "cursorPosition" : "110,39",
+        "scrollLine" : "105"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

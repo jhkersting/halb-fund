@@ -1,0 +1,26 @@
+{
+    "id": "FE306AF9",
+    "path": "~/QFRepository/Ch 10 SRM Forwards Futures and Swaps/Ch 10.2 SRM Selected Other Futures Markets/10.2 Incremental Carry Costs Test.R",
+    "project_path": "10.2 Incremental Carry Costs Test.R",
+    "type": "r_source",
+    "hash": "3725246991",
+    "contents": "",
+    "dirty": false,
+    "created": 1674265076342.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "7,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1674265111,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1674265111636,
+    "read_only": false,
+    "read_only_alternatives": []
+}

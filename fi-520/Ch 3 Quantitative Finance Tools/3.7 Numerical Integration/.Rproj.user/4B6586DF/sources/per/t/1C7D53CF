@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1598983865411.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3600783639",
+    "id" : "1C7D53CF",
+    "lastKnownWriteTime" : 1612621128,
+    "last_content_update" : 1612621128430,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.7 Numerical Integration/3.7 Numerical Integration Test.R",
+    "project_path" : "3.7 Numerical Integration Test.R",
+    "properties" : {
+        "cursorPosition" : "111,36",
+        "scrollLine" : "106"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593531331957.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2191977548",
+    "id" : "583262E5",
+    "lastKnownWriteTime" : 1571429668,
+    "last_content_update" : 1571429668,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.5 Valuation ABM CT OVM/ABMOVM Functions.R",
+    "project_path" : "ABMOVM Functions.R",
+    "properties" : {
+        "cursorPosition" : "61,32",
+        "scrollLine" : "59"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

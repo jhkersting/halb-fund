@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1610474422240.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1814116664",
+    "id" : "E82CAB19",
+    "lastKnownWriteTime" : 1611255588,
+    "last_content_update" : 1611255588085,
+    "path" : "/QFRepository/Ch 3 Quantitative Finance Tools/3.1 Calendar/Adjust Date.R",
+    "project_path" : "Adjust Date.R",
+    "properties" : {
+        "cursorPosition" : "4,16",
+        "scrollLine" : "14"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

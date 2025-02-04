@@ -1,0 +1,26 @@
+{
+    "id": "F005DEC9",
+    "path": "~/QFRepository/Ch 3 Quantitative Finance Tools/3.2 CDF and Inverse CDF/3.2 CDF and Inverse CDF Test.R",
+    "project_path": "3.2 CDF and Inverse CDF Test.R",
+    "type": "r_source",
+    "hash": "3813425477",
+    "contents": "",
+    "dirty": false,
+    "created": 1642709963786.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "98,0",
+        "scrollLine": "87"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1611507141,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1611507141,
+    "read_only": false,
+    "read_only_alternatives": []
+}

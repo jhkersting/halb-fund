@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1613253745174.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1852504072",
+    "id" : "530630B2",
+    "lastKnownWriteTime" : 1611351330,
+    "last_content_update" : 1611351330,
+    "path" : "/QFRepository/Ch 5 Valuation Options/5.3 Valuation ABM Binomial OVM/Valuation ABM Binomial OVM American-Style Test.R",
+    "project_path" : "Valuation ABM Binomial OVM American-Style Test.R",
+    "properties" : {
+        "cursorPosition" : "85,0",
+        "scrollLine" : "78"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

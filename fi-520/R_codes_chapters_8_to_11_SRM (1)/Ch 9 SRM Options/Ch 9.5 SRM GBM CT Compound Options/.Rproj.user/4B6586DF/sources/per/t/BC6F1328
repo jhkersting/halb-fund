@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595420589311.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4073997933",
+    "id" : "BC6F1328",
+    "lastKnownWriteTime" : 1595447655,
+    "last_content_update" : 1595447655471,
+    "path" : "/QFRepository/Ch 9 SRM Options/Ch 9.5 SRM GBM CT Compound Options/GBM COVM w Greeks Functions.R",
+    "project_path" : "GBM COVM w Greeks Functions.R",
+    "properties" : {
+        "cursorPosition" : "198,27",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

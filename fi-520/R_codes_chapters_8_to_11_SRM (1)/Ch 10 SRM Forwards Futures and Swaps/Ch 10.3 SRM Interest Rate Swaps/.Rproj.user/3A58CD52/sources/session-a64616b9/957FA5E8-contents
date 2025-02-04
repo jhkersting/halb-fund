@@ -1,0 +1,281 @@
+rates <- current_rates
+maturities
+scalar <- 2 # LSC scalar
+factors <- 3 # LSC factors
+reset_period <- 0.25 # How often flt rates are reset
+notional <- 1000000 # Notional amount
+current_date <- ymd("2024-01-01") # Current date
+start_date <- ymd("2024-01-01") # Start date
+end_date <- ymd("2028-01-01") # End date
+years <- interval(start_date, end_date) / years(1) # Term length of swap
+flt_calc <- 'before' # Floating rate calculation
+fix_info <- list(
+  day_count = '30/360',
+  pay_freq = 'semiannual',
+)
+flt_info <- list(
+  day_count = '30/360',
+  pay_freq = 'quarterly',
+  
+)
+get_seq_dates <- function(SDAY, EDAY, PL) {
+  # create a sequence of dates from start_date to end_date
+  if (PL == 0.25) {
+    inc <- "3 months"
+  }
+  if (PL == 0.5) {
+    inc <- "6 months"
+  }
+  if (PL == 1) {
+    inc <- "1 year"
+  }
+  dates <- seq(SDAY, EDAY, by = inc)
+  return(dates)
+}
+
+
+flt_paydays <- get_seq_dates(start_date, end_date, reset_period)
+fix_paydays <- get_seq_dates(start_date, end_date, reset_period)
+# remove first element for period length
+flt_paydays <- flt_paydays[-1]
+fix_paydays <- fix_paydays[-1]
+# get values in years
+flt_pay_years <- interval(start_date, flt_paydays) / years(1)
+fix_pay_years <- interval(start_date, fix_paydays) / years(1)
+
+# get the rate calc_days
+flt_calc_days <- get_seq_dates(start_date, end_date, reset_period)
+# if before remove last element else remove first element
+if (flt_calc == 'before') {
+  flt_calc_days <- flt_calc_days[-length(flt_calc_days)]
+} else {
+  flt_calc_days <- flt_calc_days[-1]
+}
+# get the rate calc_days
+fix_calc_days <- get_seq_dates(start_date, end_date, reset_period)
+fix_calc_days <- fix_calc_days[-1]
+
+# get the rate calc_days in years
+fix_calc_years <- interval(start_date, fix_calc_days) / years(1)
+flt_calc_years <- interval(start_date, flt_calc_days) / years(1) 
+
+
+
+get_lsc_scalar <- function(Sc, Rs, Ms, Fa) {
+  x2 <- (Sc / Ms) * (1 - exp(-Ms / Sc))
+  x3 <- x2 - exp(-Ms / Sc)
+  x4 <- x3 
+  model <- lm(Rs ~ x2 + x3)
+  ll <- -logLik(model)  # Negate log-likelihood for minimization
+  return(as.numeric(ll))  # Ensure the return value is numeric for optimization
+}
+
+
+optimize_scalar <- function(Rs, Ms, Fa, initial_scalar) {
+  # The optim function to find the optimal scalar
+  optimal_result <- optim(par = initial_scalar, 
+                          fn = get_lsc_scalar, 
+                          Rs = Rs, Ms = Ms, Fa = Fa,
+                          method = "L-BFGS-B",  # Suitable for bounded optimization
+                          lower = 0.01,         # Lower bound for the scalar
+                          upper = 100)          # Upper bound for the scalar
+  par <- optimal_result$par  # Get the optimal scalar found
+  print(paste("Optimal scalar found: ", par))
+  return(par)  # Return the optimal scalar found
+}
+
+get_lsc_coeff <- function(Rs, Ms, Fa) {
+  Sc <- optimize_scalar(Rs,Ms,Fa,1)
+  x2 <- (Sc / Ms) * (1 - exp(-Ms / Sc))
+  x3 <- x2 - exp(-Ms / Sc)
+  model <- lm(Rs ~ x2 + x3)
+  coeff <- coef(model)
+  scalar <- Sc
+  # create a list with the scalar and coefficients
+  output <- list(scalar = scalar, coefficients = coeff)
+  return(output)
+}
+
+get_lsc_rate <- function(input,M,Fa){ 
+  # input is a list with scalar and coefficients, M is maturity, Fa is factors
+  coeffs <- input$coefficients
+  Sc <- input$scalar
+  M <- ifelse(M== 0, 0.00001, M)
+  x2 <- (Sc / M) * (1 - exp(-M / Sc))
+  x3 <- x2 - exp(-M / Sc)
+  c1 <- coeffs[1]
+  c2 <- coeffs[2]
+  c3 <- coeffs[3]
+  rate <- c1 + c2 * x2 + c3 * x3
+  return(as.numeric(rate))
+}
+
+get_lsc_spot_rates <- function(Rs, Ms, Fa, Ys,CDs,PL) { # Rs is rates, Ms is maturities, 
+  #Fa is factors, Ys is years, CDs is calc dates
+  lsc_input <- get_lsc_coeff(Rs, Ms, Fa)
+  print(lsc_input)
+  # find difference in years compared to current_date using lubridate
+  periods <- interval(start_date, CDs) / years(1)
+  # create a double with the discount rates
+  spot_rates <- sapply(periods, function(x) get_lsc_rate(lsc_input, x, Fa))
+  print(periods)
+  print(spot_rates)
+  
+  if (PL == 0.25) {
+    # get X3mo from rates
+    index <- which(Ms == 0.25)
+    spot_rates[1] <- Rs[index]
+  }
+  if (PL == 0.5) {
+    # get X6mo from rates
+    index <- which(Ms == 0.5)
+    spot_rates[1] <- Rs[index]
+  }
+  if(PL == 1){
+    # get X1yr from rates
+    index <- which(Ms == 1)
+    spot_rates[1] <- Rs[index]
+  }
+  
+  return(spot_rates)
+}
+
+get_forward_rates <- function(SRs,PL){ # SRs is spot rates, PL is period length
+  #adjust rates for period length
+  SRs <- SRs * PL
+  # create a double with the forward rates
+  FRs <- numeric(length(SRs) - 1)
+  for (i in 1:(length(SRs) - 1)) {
+    FRs[i] <- ((1 + SRs[i + 1])^(i + 1) / (1 + SRs[i])^i) - 1
+  }
+  FRs <- c(SRs[1], FRs)
+  FRs <- FRs / PL
+  return(FRs)
+}
+
+lsc_spot_rates <- get_lsc_spot_rates(rates,maturities,factors,years,flt_calc_days,reset_period)
+lsc_forward_rates <- get_forward_rates(lsc_spot_rates,reset_period)
+lsc_spot_rates
+lsc_forward_rates
+# plot the spot rates
+plot(lsc_forward_rates, type = "l", xlab = "Years", ylab = "Rates", main = "LSC Spot Rates")
+# plot the forward rates
+lines(lsc_spot_rates, col = "red")
+legend("r", legend = c("Forward Rates", "Spot Rates"), col = c("black", "red"), lty = 1:1, cex = 0.8)
+
+
+fx_swap_rate <- function(SRs, FRs, FltP) { # SRs is spot rates, FRs is forward rates, 
+  #PL is period length, FltP is float pay dates in years
+  # create a double with the swap rates
+  # get Period Lengths for each float paymentdate
+  period_lengths <- diff(FltP)
+  # add first element back
+  PL <- c(FltP[1], period_lengths)
+  SRs <- SRs * PL
+  FRs <- FRs * PL
+  discount_rates <- numeric(length(SRs))
+  for(i in 1:length(SRs)){
+    discount_rates[i] <- 1 / (1 + SRs[i])^i
+  }
+  weights <- discount_rates / sum(discount_rates)
+  swap_rate <- sum(FRs * weights)
+  swap_rate <- swap_rate / mean(PL)
+  return(swap_rate)
+}
+
+
+swap_fixed_rate <- fx_swap_rate(lsc_spot_rates, lsc_forward_rates, flt_pay_years)
+swap_fixed_rate
+# add swap rate to the plot
+abline(h = swap_fixed_rate, col = "blue")
+
+#swap_fixed_rate <- 0.04
+
+get_swap_value <- function(SRs, FRs, PL, Yr, No,Fx,Party='Pay Fixed') { # SRs is spot rates, FRs is forward rates, 
+  #PL is period length, Yr is years, No is notional, Fx is fixed rate
+  # create a double with the swap rates
+  SRs <- SRs * PL
+  FRs <- FRs * PL
+  discount_rates <- numeric(length(SRs))
+  for(i in 1:length(SRs)){
+    discount_rates[i] <- 1 / (1 + SRs[i])^i
+  }
+  # create a double with fx * PL with length of SRs
+  fix_payments <- numeric(length(SRs))
+  for(i in 1:length(SRs)){
+    fix_payments[i] <- Fx * PL
+  }
+  flt_payments <- FRs
+  pv_fix <- fix_payments * discount_rates
+  pv_flt <- flt_payments * discount_rates
+  if(Party == 'Pay Fixed'){
+    pv <- sum(pv_flt) - sum(pv_fix)
+  } else {
+    pv <- sum(pv_fix) - sum(pv_flt)
+  }
+  value <- pv * No
+  return(value)
+}
+
+
+swap_value <- get_swap_value(lsc_spot_rates, lsc_forward_rates, reset_period, years, notional, swap_fixed_rate)
+swap_value
+
+# test sensitivity based on fixed rate
+fixed_rates <- seq(0.01, 0.1, by = 0.01)
+sensitivities <- numeric(length(fixed_rates))
+for (i in 1:length(fixed_rates)) {
+  sensitivities[i] <- get_swap_value(lsc_spot_rates, lsc_forward_rates, reset_period, years, notional, fixed_rates[i])
+}
+sensitivities
+plot(fixed_rates, sensitivities, type = "l", xlab = "Fixed Rate", ylab = "Value", main = "Sensitivity to Fixed Rate")
+# add breask even point
+abline(h = 0, col = "red")
+
+
+current_date <- ymd("2024-01-01")
+#current_rates <- ts_data[nrow(ts_data), ]
+
+current_info <- list(rates = ts_data[8500, ],
+                     maturities = maturities,
+                     current_date = current_date)
+
+# get current lsc coeff
+current_info$lsc_coeffs <- get_lsc_coeff(current_info)
+
+# create new swap data in an updated list
+updated_swap <- swap_data
+updated_swap$yield_curve <- current_info$rates
+updated_swap$current_date <- current_info$current_date
+updated_swap$years <-
+  interval(updated_swap$start_date, updated_swap$end_date) / years(1)
+updated_swap$passed_years <-
+  interval(swap_data$start_date,updated_swap$current_date) / years(1)
+
+# get leg info
+updated_swap$fix_info <- get_leg_info(updated_swap, 'fix_info')
+updated_swap$flt_info <- get_leg_info(updated_swap, 'flt_info')
+new_fixed_rate <- get_swap_rate(updated_swap)
+updated_swap$null_fixed_rate <- new_fixed_rate
+
+# get_accrued_interest
+updated_swap$accrued_interest <- get_accrued_interest(updated_swap,swap_data)
+
+"df$date <- as.Date(df$date, format = '%m/%d/%Y')
+#data <- data[data$date > as.Date('2000-01-01'),]
+ts_data <- xts(df[,-1], order.by = df$date)
+
+## Clean data
+# replace "" with NA
+ts_data[ts_data == ''] <- 'ND'
+# Remove rows that have ND in every column
+ts_data <- ts_data[!apply(ts_data, 1, function(x)all(x == 'ND')),]
+# replace 'ND with NA
+ts_data[ts_data == 'ND'] <- NA
+# remove rows with NA
+ts_data <- ts_data[complete.cases(ts_data),]
+# convert to numeric
+ts_data <- apply(ts_data, 2, as.numeric)
+ts_data <- ts_data / 100
+save(ts_data, file = 'ts_data.RData')"
+
